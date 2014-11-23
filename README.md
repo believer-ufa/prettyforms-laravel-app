@@ -6,6 +6,9 @@ prettyforms-laravel-app
 
 ####Установка
 
+Для корректной установки на вашем сервере должны быть установлены PHP 5.4, расширение mcrypt для PHP и Composer.
+Для установки сделайте следующее:
+
 - Склонировать проект на локальную машину, войти в папку проекта
 ```bash
 git clone git@github.com:believer-ufa/prettyforms-laravel-app.git
@@ -18,6 +21,7 @@ composer install
 - Настроить подключение к MySQL базе данных в файле **app/config/database.php**
 - Создать базу данных приложения, выполнив SQL-запрос в MySQL
 ```sql
+CREATE DATABASE `prettyforms-testapp` COLLATE 'utf8_general_ci'
 ```
 - Запустить скрипт генерации таблиц БД
 ```bash
