@@ -2,6 +2,8 @@
 
 К статье на Хабрахабре [Динамичное веб-приложение на основе Laravel, PrettyForms и Backbone.js](http://habrahabr.ru/post/243925/)
 
+![Screenshot](http://hsto.org/files/fa2/13d/573/fa213d573cee4b7abcadb3691b3ca519.gif)
+
 ####Установка
 
 Для корректной установки на вашем сервере должны быть установлены PHP 5.4, расширение mcrypt для PHP и Composer.
