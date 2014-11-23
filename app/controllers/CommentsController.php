@@ -93,7 +93,7 @@ class CommentsController extends BaseController {
     {
         if (Auth::guest()) {
             return Commands::generate([
-                'validation_errors' => 'Пожалуйста, <a href="/login">авторизуйтесь</a> перед написанием комментария'
+                'validation_errors' => 'Пожалуйста, <a href="/auth/login">авторизуйтесь</a> перед написанием комментария'
             ]);
         } else {
             $comment = new Comment;
@@ -112,7 +112,7 @@ class CommentsController extends BaseController {
     {
         if (Auth::guest()) {
             return Commands::generate([
-                'validation_errors' => 'Пожалуйста, <a href="/login">авторизуйтесь</a> перед написанием комментария'
+                'validation_errors' => 'Пожалуйста, <a href="/auth/login">авторизуйтесь</a> перед написанием комментария'
             ]);
         } else {
             $comment = Comment::with('user')->find($id); /* @var $comment Comment */
