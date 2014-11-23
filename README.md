@@ -1,7 +1,8 @@
 prettyforms-laravel-app
 =======================
 
-Пример веб-приложения на Laravel, PrettyForms и Backbone.js
+Пример веб-приложения на Laravel, PrettyForms и Backbone.js.
+
 К статье на Хабрахабре [Динамичное веб-приложение на основе Laravel, PrettyForms и Backbone.js](http://habrahabr.ru/post/243925/)
 
 ####Установка
