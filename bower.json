@@ -1,0 +1,16 @@
+{
+  "name": "laravel-prettyforms-app",
+  "version": "0.1.0",
+  "authors": [
+    "Akhmadullin Roman <freeman.aka.ahmed@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "backbone": "~1.1.2",
+    "prettyforms": "~0.1.2"
+  },
+  "install": {
+    "path": "public/assets/bower"
+  }
+}
