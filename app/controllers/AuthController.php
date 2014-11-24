@@ -37,7 +37,7 @@ class AuthController extends BaseController {
             $user->validateAndSave();
 
             return Commands::generate([
-                'redirect' => '/auth/login'
+                'redirect' => '/auth/login?email='.Input::get('email')
             ]);
 
         } else {

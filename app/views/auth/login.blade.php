@@ -17,7 +17,7 @@
                    id="inputEmail3"
                    name="email"
                    data-validation="notempty;isemail"
-                   value="<?=Input::old('email')?>"
+                   value="<?=Input::old('email',Input::get('email'))?>"
                    placeholder="Введите ваш email, чтобы позже иметь возможность восстановить пароль.">
         </div>
     </div>
@@ -38,11 +38,7 @@
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit"
-                    data-input=".form-horizontal"
-                    data-link="<?=URL::to('auth/login')?>"
-                    data-clearinputs="true"
-                    class="btn btn-default">Войти</button>
+            <button type="submit" class="btn btn-default">Войти</button>
         </div>
     </div>
 </form>

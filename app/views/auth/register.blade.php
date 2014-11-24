@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form class="form-horizontal" role="form" method="POST">
+<div class="form-horizontal" role="form">
     <h1 class="form-signin-heading">Регистрация</h1>
     <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -72,13 +72,12 @@
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <div type="submit"
-                    data-input=".form-horizontal"
-                    data-link="<?=URL::to('auth/register')?>"
-                    data-clearinputs="true"
-                    class="btn btn-default senddata">Зарегистрироваться</div>
+            <div data-input=".form-horizontal"
+                 data-link="<?=URL::to('auth/register')?>"
+                 data-clearinputs="true"
+                 class="btn btn-default senddata">Зарегистрироваться</div>
         </div>
     </div>
-</form>
+</div>
 
 @stop

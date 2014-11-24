@@ -79,10 +79,9 @@
                                  и открыть форму редактирования коммента: */ ?>
                         <% if (edit === true) { %>
                             <div id='form-edit-comment-<%=id%>'>
-                                <textarea style='width: 100%; min-height: 50px;' name='text'><%=text%></textarea>
+                                <textarea style='width: 100%; min-height: 50px;' data-validation="notempty" name='text'><%=text%></textarea>
                                 <div data-input="#form-edit-comment-<%=id%>"
                                     data-link="/comments/edit/<%=id%>"
-                                    data-clearinputs="true"
                                     class="btn btn-primary btn-xs senddata-token">Сохранить</div>
                                 <div class='btn btn-default btn-xs edit-cancel'>Отмена</div>
                                 <br/><br/>
