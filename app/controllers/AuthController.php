@@ -34,7 +34,11 @@ class AuthController extends BaseController {
             $user->email    = Input::get('email');
             $user->name     = Input::get('name');
             $user->password = Hash::make(Input::get('password'));
-            $user->validateAndSave();
+            $result = $user->validateAndSave();
+            if (is_array($result)) {
+                // Если при валидации были возвращены ошибки - отправим их клиенту
+                return $result;
+            }
 
             return Commands::generate([
                 'redirect' => '/auth/login?email='.Input::get('email')

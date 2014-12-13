@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration {
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('cascade');;
+                ->onDelete('cascade');
 
             $table->integer('article_id')->unsigned();
             $table->text('text');
@@ -52,13 +52,13 @@ class CreateUsersTable extends Migration {
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('cascade');;
+                ->onDelete('cascade');
 
             $table->integer('comment_id')->unsigned();
             $table->foreign('comment_id')
                 ->references('id')
                 ->on('comments')
-                ->onDelete('cascade');;
+                ->onDelete('cascade');
 
 			$table->timestamps();
 		});

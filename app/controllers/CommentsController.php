@@ -100,7 +100,11 @@ class CommentsController extends BaseController {
             $comment->user_id = Auth::user()->id;
             $comment->article_id = Input::get('article_id');
             $comment->text = Input::get('text');
-            $comment->validateAndSave();
+            $result = $comment->validateAndSave();
+            if (is_array($result)) {
+                // Если при валидации были возвращены ошибки - отправим их клиенту
+                return $result;
+            }
             return Commands::generate([
                 'add_comment' => Comment::with('user')->find($comment->id)->toArray(),
             ]);
