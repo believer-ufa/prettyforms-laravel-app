@@ -55,6 +55,15 @@ App::error(function(Exception $exception, $code)
     }
 });
 
+// Код обработки ошибок валидации моделей
+App::error(function(PrettyForms\LaravelValidatorException $exception)
+{
+    return PrettyForms\Commands::generate([
+        'validation_errors' => PrettyForms\Commands::generateValidationErrors($exception->getValidationErrors())
+    ]);
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
